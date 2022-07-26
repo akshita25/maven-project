@@ -17,3 +17,8 @@ jobs:
           github token: ${{ secrets.GITHUB_TOKEN }}
       - name: Interact with the cluster
         run: kubectl get nodes
+      - name: Create nginx pod
+        run: kubectl run nginx --image nginx
+      - name: Get pods
+        run: kubectl get pods
+      
